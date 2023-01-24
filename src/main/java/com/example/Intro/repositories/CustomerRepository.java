@@ -11,5 +11,8 @@ import java.util.Optional;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     List<Customer> findByNameContaining(String name);
+    List<Customer> findByStatusLike(String status);
+
+
 
 }

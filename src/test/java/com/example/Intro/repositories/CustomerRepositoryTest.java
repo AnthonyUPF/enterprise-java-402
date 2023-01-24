@@ -3,6 +3,7 @@ package com.example.Intro.repositories;
 
 import com.example.Intro.models.Customer;
 import com.example.Intro.models.CustomerStatus;
+import com.example.Intro.models.Flight;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -65,6 +66,7 @@ public class CustomerRepositoryTest {
             assertTrue(newCustomerRepository.size()>0);
         }
     }
+
 
 
 }
