@@ -1,4 +1,4 @@
-package com.example.Intro;
+package com.example.Intro.model;
 
 import jakarta.persistence.*;
 
@@ -7,14 +7,14 @@ import jakarta.persistence.*;
 @Table(name="customer")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
     @Column(name="name")
     private String name;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     @Column(name="status")
     private CustomerStatus status;
 
@@ -23,7 +23,6 @@ public class Customer {
     }
 
     public Customer(String name, CustomerStatus status) {
-        this.id=id;
         setName(name);
         setStatus(status);
     }
