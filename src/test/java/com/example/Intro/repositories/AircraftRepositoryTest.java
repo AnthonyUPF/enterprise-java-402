@@ -51,6 +51,7 @@ public class AircraftRepositoryTest {
         List<Aircraft> newAircraftRepository = aircraftRepository.findByModelLike("%Boeing%");
         if(!newAircraftRepository.isEmpty()){
             assertTrue(newAircraftRepository.size()>1);
+            assertEquals(2,newAircraftRepository.size());
         }
     }
 

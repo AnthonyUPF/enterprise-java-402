@@ -69,9 +69,10 @@ public class CustomerRepositoryTest {
 
     @Test
     void shouldReturnListCustomerByStatus() {
-        List<Customer> newCustomerRepository = customerRepository.findByStatus(customer3.getStatus());
+        List<Customer> newCustomerRepository = customerRepository.findByStatus(customer1.getStatus());
         if(!newCustomerRepository.isEmpty()){
-            assertTrue(newCustomerRepository.size()>1);
+            assertTrue(newCustomerRepository.size()>3);
+            assertEquals(4,newCustomerRepository.size());
         }
     }
 

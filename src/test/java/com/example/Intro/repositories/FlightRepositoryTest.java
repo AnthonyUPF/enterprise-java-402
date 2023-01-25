@@ -64,6 +64,7 @@ public class FlightRepositoryTest {
         List<Flight> newFlightRepository = flightRepository.findByMileageGreaterThan(500l);
         if (!newFlightRepository.isEmpty()) {
             assertTrue(newFlightRepository.size() > 3);
+            assertEquals(4,newFlightRepository.size());
         }
     }
 }
